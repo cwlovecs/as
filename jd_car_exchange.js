@@ -24,7 +24,7 @@ cron "0 0 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_
 ============小火箭=========
 京东汽车兑换 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js, cronexpr="0 0 * * *", timeout=3600, enable=true
  */
-const $ = new Env('京东汽车兑换');
+const $ = new Env('京东汽车兑换^oo^');
 
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
@@ -90,7 +90,7 @@ function exchange() {
         } else {
           if (safeGet(data)) {
             data = JSON.parse(data);
-            console.log(`兑换结果：${JSON.stringify(data)}\n`)
+            console.log(`兑换结果🦄：${JSON.stringify(data)}\n`)
           }
         }
       } catch (e) {
